@@ -13,21 +13,21 @@ class Stack:
 
     def __init__(self, *args):
         if args:
-            self.stack = [arg for arg in args]
+            self.items = [arg for arg in args]
         else:
-            self.stack = []
+            self.items = []
         
     def push(self, item: int):
-        self.stack.push(item)
+        self.items.push(item)
 
     def pop(self):
-        self.stack.pop()
+        self.items.pop()
 
     def is_empty(self):
-        return len(self.stack) == 0
+        return len(self.items) == 0
 
     def __str__(self):
-        return f"Stack status: {len(self.stack)} items"
+        return f"Stack status: {len(self.items)} items"
 
     def __repr__(self):
-        return f"Stack({', '.join(str(x) for x in self.stack)})"
+        return f"Stack({', '.join(str(x) for x in self.items)})"
